@@ -1,0 +1,46 @@
+{% extends "accounts/base.html" %}
+{% block title %}Admin Panel{% endblock %}
+{% block body %}
+<div style="width:100%; min-height:100vh; background:#f0f2f5;">
+    <nav>
+        <span>MyApp — Admin Panel</span>
+        <div>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/logout/">Logout</a>
+        </div>
+    </nav>
+    <div class="page">
+        <div class="card" style="max-width:100%; margin-top:0;">
+            <h2>All Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Joined</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in users %}
+                    <tr>
+                        <td>{{ u.id }}</td>
+                        <td>{{ u.username }}</td>
+                        <td>{{ u.email|default:"—" }}</td>
+                        <td>
+                            {% if u.is_superuser %}
+                                <span class="badge badge-admin">Admin</span>
+                            {% else %}
+                                <span class="badge badge-user">User</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ u.date_joined|date:"Y-m-d" }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "accounts/base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block body %}
+<div style="width:100%; min-height:100vh; background:#f0f2f5;">
+    <nav>
+        <span>MyApp</span>
+        <div>
+            <span>{{ user.username }}</span>
+            {% if user.is_staff %}<a href="/admin-panel/">Admin Panel</a>{% endif %}
+            <a href="/logout/">Logout</a>
+        </div>
+    </nav>
+    <div class="page">
+        <div class="card" style="max-width:100%; margin-top:0;">
+            <h2>Welcome, {{ user.username }}!
+                {% if user.is_staff %}
+                    <span class="badge badge-admin">Admin</span>
+                {% else %}
+                    <span class="badge badge-user">User</span>
+                {% endif %}
+            </h2>
+            <p style="margin-top:1rem; color:#555;">You are logged in as a <strong>{{ role }}</strong>.</p>
+            {% if user.is_staff %}
+            <p style="margin-top:0.5rem; color:#555;">You have access to the <a href="/admin-panel/">Admin Panel</a> and the <a href="/admin/">Django Admin</a>.</p>
+            {% else %}
+            <p style="margin-top:0.5rem; color:#555;">Regular users can view this dashboard only.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

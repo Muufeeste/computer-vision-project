@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 🔙 Back -->
+<button class="back-btn" onclick="history.back()">
+  <span class="arrow"><--</span>
+  Back
+</button>
+
+<div class="container">
+
+  <h1>Search Results</h1>
+
+  <!-- search again -->
+  <div class="search-box">
+    <input id="searchInput" placeholder="Search movies..." />
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- movies -->
+  <div id="movies" class="movies"></div>
+
+</div>
+
+<script type="module" src="js/search.js"></script>
+
+</body>
+</html>

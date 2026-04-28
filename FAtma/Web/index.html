@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie App</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 👤 USER ICON + DROPDOWN -->
+  <div class="user-area">
+    <img 
+      id="userIcon"
+      src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+      alt="user"
+    />
+
+    <div id="userMenu" class="user-menu hidden">
+      <button id="goFavorites">Favorites</button>
+      <button id="logoutBtn">Logout</button>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <h1>Movie App</h1>
+
+    <!-- Search -->
+    <div class="search-box">
+      <input id="searchInput" type="text" placeholder="Search movies..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <button data-genre="all">All</button>
+      <button data-genre="878">Sci-Fi</button>
+      <button data-genre="27">Horror</button>
+      <button data-genre="28">Action</button>
+    </div>
+
+    <!-- Movies -->
+    <div id="movies" class="movies"></div>
+
+  </div>
+
+  <!-- 🔥 MUST be module (for Firebase imports) -->
+  <script type="module" src="js/index.js"></script>
+
+</body>
+</html>
