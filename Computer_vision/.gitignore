@@ -1,0 +1,111 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Virtual Environments
+# =========================
+venv/
+env/
+.venv/
+.env
+
+# =========================
+# AI / ML Models
+# =========================
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.onnx
+*.bin
+*.safetensors
+*.ckpt
+*.tflite
+
+# =========================
+# Training Outputs
+# =========================
+checkpoints/
+outputs/
+results/
+runs/
+logs/
+
+# =========================
+# Datasets
+# =========================
+datasets/
+dataset/
+data/
+
+# =========================
+# Large Fine-Tuning Folders
+# =========================
+Fine Tuning/ViT/Finetuned_model/
+Fine Tuning/CLIP/
+
+# =========================
+# Videos
+# =========================
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# =========================
+# Archives
+# =========================
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# =========================
+# Images (optional)
+# Uncomment if needed
+# =========================
+# *.png
+# *.jpg
+# *.jpeg
+
+# =========================
+# CSV / Large Tables (optional)
+# Uncomment if needed
+# =========================
+# *.csv
+
+# =========================
+# Secrets / API Keys
+# =========================
+*.pem
+*.key
+secrets.json
+config.json
+
+# Ignore DALL.E notebook
+Large_Vision_Models/DALL.E/
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS Files
+# =========================
+Thumbs.db
+.DS_Store
+desktop.ini
